@@ -1,0 +1,15 @@
+server:
+  port: 8085
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: report-service
+  scheduler:
+    cron: 0 10 * * *
+  kafka:
+    bootstrap-servers: kafka:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
